@@ -1,4 +1,4 @@
-import type { AnnouncementRepository } from "../../domain/repositories/AnnouncementRepository";
+import type { AnnouncementRepository } from "../../src/domain/repository/AnnouncementRepository";
 
 export class GetAnnouncement {
   constructor(private announcementRepository: AnnouncementRepository) {}

@@ -1,10 +1,10 @@
-import { AnnouncementRepositoryFake } from '../../src/application/repositories/AnnouncementRepositoryFake';
-import { CreateAnnouncement } from '../../src/application/useCases/CreateAnnouncement';
-import { GetAnnouncement } from '../../src/application/useCases/GetAnnouncement';
+import { AnnouncementRepositoryMemory } from '../../src/infra/repository/memory/AnnouncementRepositoryMemory';
+import { CreateAnnouncement } from '../../src/application/CreateAnnouncement';
+import { GetAnnouncement } from '../../src/application/GetAnnouncement';
 
 describe('Test GetAnnouncement', () => {
   it('Should get a announcement', async () => {
-    const announcementRepository = new AnnouncementRepositoryFake();
+    const announcementRepository = new AnnouncementRepositoryMemory();
     const createAnnouncement = new CreateAnnouncement(announcementRepository);
     const { id } = await createAnnouncement.execute({
       title: 'Casa completa',

@@ -1,4 +1,4 @@
-import { Address } from "../../src/domain/entities/Address";
+import { Address } from "../../src/domain/entity/Address";
 
 describe('Tests - Address', () => {
   it('Should create a Address', () => {

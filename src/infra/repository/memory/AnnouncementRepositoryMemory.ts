@@ -1,9 +1,9 @@
 import { v4 } from 'uuid';
-import { Announcement } from "../../domain/entities/Announcement";
-import type { AnnouncementRepository } from "../../domain/repositories/AnnouncementRepository";
+import { Announcement } from "../../../domain/entity/Announcement";
+import type { AnnouncementRepository } from "../../../domain/repository/AnnouncementRepository";
 
 
-export class AnnouncementRepositoryFake implements AnnouncementRepository {
+export class AnnouncementRepositoryMemory implements AnnouncementRepository {
   private announcements: Announcement[] = []
 
   async create(announcement: Announcement): Promise<string> {

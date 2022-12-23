@@ -1,7 +1,7 @@
-import { Address } from "../../domain/entities/Address";
-import { Announcement } from "../../domain/entities/Announcement";
-import { Iptu } from "../../domain/entities/Iptu";
-import type { AnnouncementRepository } from "../../domain/repositories/AnnouncementRepository";
+import { Address } from "../domain/entity/Address";
+import { Announcement } from "../domain/entity/Announcement";
+import { Iptu } from "../domain/entity/Iptu";
+import type { AnnouncementRepository } from "../domain/repository/AnnouncementRepository";
 
 export class CreateAnnouncement {
   constructor(private announcementRepository: AnnouncementRepository) {}

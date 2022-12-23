@@ -1,4 +1,4 @@
-import { Iptu } from "../../src/domain/entities/Iptu";
+import { Iptu } from "../../src/domain/entity/Iptu";
 
 describe('Tests - Iptu', () => {
   it('Should create a Iptu', () => {

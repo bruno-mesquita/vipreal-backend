@@ -1,6 +1,6 @@
-import { Address } from "../../src/domain/entities/Address";
-import { Announcement } from "../../src/domain/entities/Announcement";
-import { Iptu } from "../../src/domain/entities/Iptu";
+import { Address } from "../../src/domain/entity/Address";
+import { Announcement } from "../../src/domain/entity/Announcement";
+import { Iptu } from "../../src/domain/entity/Iptu";
 
 describe('Tests - Announcement', () => {
   it('Should create a Announcement', () => {

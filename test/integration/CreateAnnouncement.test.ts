@@ -1,9 +1,9 @@
-import { AnnouncementRepositoryFake } from '../../src/application/repositories/AnnouncementRepositoryFake';
-import { CreateAnnouncement } from '../../src/application/useCases/CreateAnnouncement';
+import { AnnouncementRepositoryMemory } from '../../src/infra/repository/memory/AnnouncementRepositoryMemory';
+import { CreateAnnouncement } from '../../src/application/CreateAnnouncement';
 
 describe('Test CreateAnnouncement', () => {
   it('Should create Announcement', async () => {
-    const announcementRepository = new AnnouncementRepositoryFake();
+    const announcementRepository = new AnnouncementRepositoryMemory();
     const createAnnouncement = new CreateAnnouncement(announcementRepository);
     const output = await createAnnouncement.execute({
       title: 'Casa completa',

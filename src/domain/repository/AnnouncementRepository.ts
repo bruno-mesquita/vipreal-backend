@@ -1,4 +1,4 @@
-import { Announcement } from "../../domain/entities/Announcement";
+import { Announcement } from "../entity/Announcement";
 
 export interface AnnouncementRepository {
   create(announcement: Announcement): Promise<string>;
