@@ -2,7 +2,7 @@ import { AnnouncementRepositoryMemory } from '../../src/infra/repository/memory/
 import { CreateAnnouncement } from '../../src/application/CreateAnnouncement';
 
 describe('Test CreateAnnouncement', () => {
-  it('Should create Announcement', async () => {
+  it('Should create Announcement in memory', async () => {
     const announcementRepository = new AnnouncementRepositoryMemory();
     const createAnnouncement = new CreateAnnouncement(announcementRepository);
     const output = await createAnnouncement.execute({

@@ -17,7 +17,7 @@ export class ExpressAdapter implements Http {
     this.app = app;
   }
 
-  on<I = any, O = any>(method: 'get' | 'post' | 'delete' | 'put', url: string, callback: (input: I) => Promise<O>): void {
+  on<I = unknown, O = unknown>(method: 'get' | 'post' | 'delete' | 'put', url: string, callback: (input: I) => Promise<O>): void {
     this.app[method](url, async (req, res) => {
       const output = await callback({
         ...req.body,
